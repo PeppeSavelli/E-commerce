@@ -68,5 +68,5 @@ routerApi.use("/users", routerUsers);
 app.use("/api", routerApi);
 
 app.listen(3000, function(){
-    console.log("Server is running on http://localhost:3000")
+    console.log("Server is running on https://e-commerce-production-6992.up.railway.app")
 });
