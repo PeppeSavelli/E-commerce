@@ -88,7 +88,7 @@ export class E_commerce {
           }
       }
 
-    updateAd(primaryKeyAnnunci:number, title:string, description:string, category:string, price:string, status:string, photo:string, address: string, sold: string, phone:string, token:number) {
+    updateAd(primaryKeyAnnunci:number, title:string, description:string, category:string, status:string, price:string,photo:string, address: string, sold: string, phone:string, token:number) {
         // Verifica il token
         const auth = this.getAuthByToken(token);
 
