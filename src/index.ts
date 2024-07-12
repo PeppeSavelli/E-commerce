@@ -55,7 +55,7 @@ app.get("/api/ads", function(req: Request, res: Response){
 app.put("/api/ads/:primaryKeyAnnuncio", function(req: Request, res: Response){
     const token = Number(req.headers.authorization);
     if (!token) return res.status(200).json("token non esistente");
-    const ad = app2.updateAd(Number(req.params.primaryKeyAnnuncio) ,req.body.title, req.body.description, req.body.price, req.body.status, req.body.category, req.body.phone, req.body.photo, token);
+    const ad = app2.updateAd(Number(req.params.primaryKeyAnnuncio) ,req.body.title, req.body.description, req.body.category, req.body.status, req.body.price, req.body.photo, req.body.address, req.body.sold, req.body.phone,token);
     if (ad) return res.status(200).json("Annuncio modificato con successo!");
     return res.status(400).json("Impossibile creare l'annuncio, riprovare!");
 });
