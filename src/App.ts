@@ -88,7 +88,7 @@ export class E_commerce {
           }
       }
 
-    updateAd(primaryKeyAnnunci:number, title:string, description:string, price:string, status:string, category:string, phone:string, photo:string, token:number) {
+    updateAd(primaryKeyAnnunci:number, title:string, description:string, category:string, price:string, status:string, photo:string, address: string, sold: string, phone:string, token:number) {
         // Verifica il token
         const auth = this.getAuthByToken(token);
 
@@ -101,7 +101,7 @@ export class E_commerce {
             this.ads = this.ads.map(ad => {
                 if (ad.primaryKeyAnnunci === primaryKeyAnnunci) {
                     adUpdated = true;
-                    return { ...ad, title, description, price, status, category, phone, photo };
+                    return { ...ad, title, description, category, status, price, photo, address, sold, phone };
                 } else {
                     return ad;
                 }
