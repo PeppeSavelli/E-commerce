@@ -68,5 +68,5 @@ routerApi.use("/users", routerUsers);
 app.use("/api", routerApi);
 
 app.listen(3000, function(){
-    console.log("Server is running on e-commerce-production-95ec.up.railway.app")
+    console.log("Server is running on e-commerce-production-34b2.up.railway.app")
 });
